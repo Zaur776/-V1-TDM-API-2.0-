@@ -1,19 +1,70 @@
 {
-  "ApiVersion": 2,
-  "Name": "PRISON_RIOT",
-  "Description": "Prison Riot Mode",
+  "Name": "ТЮРЬМА (БУНТ)",
+  "Description": "Режим Тюрьма. Заключенные пытаются поднять бунт, Охрана защищает склад.",
   "StartClientVersion": 532,
+  "MapFilter": {
+    "IsBlank": false,
+    "HasParcourEnd": false
+  },
+  "MapLists": [
+    {
+      "MapListId": 324,
+      "Name": "Официальные карты"
+    },
+    {
+      "MapListId": 581
+    }
+  ],
   "Parameters": {
     "Bool": [
-      { "Name": "Damage", "DisplayName": "Damage", "Default": true },
-      { "Name": "PartialDesruction", "DisplayName": "Destruction", "Default": false },
-      { "Name": "LoosenBlocks", "DisplayName": "Loosen Blocks", "Default": false },
-      { "Name": "RedTeam", "DisplayName": "Prisoners Team", "Default": true },
-      { "Name": "BlueTeam", "DisplayName": "Guards Team", "Default": true }
+      {
+        "Name": "MapRotation",
+        "DisplayName": "Ротация карт",
+        "Default": true,
+        "Order": 1
+      },
+      {
+        "Name": "OnlyKnives",
+        "DisplayName": "Только ножи",
+        "Order": 3
+      },
+      {
+        "Name": "OnlyPlayerBlocksDmg",
+        "DisplayName": "Урон только по блокам игроков",
+        "Order": 4
+      },
+      {
+        "Name": "LoosenBlocks",
+        "DisplayName": "Слабые блоки",
+        "Order": 6
+      },
+      {
+        "Name": "FriendlyFire",
+        "DisplayName": "Огонь по своим",
+        "Order": 5
+      }
     ],
-    "Number": [
-      { "Name": "MaxSpawns", "DisplayName": "Max Spawns", "Default": 0 },
-      { "Name": "RoundTime", "DisplayName": "Round Time (sec)", "Default": 600 }
+    "Dropdown": [
+      {
+        "Name": "Length",
+        "DisplayName": "Длительность",
+        "Default": "Normal",
+        "Order": 2,
+        "Variants": [
+          {
+            "Name": "Short",
+            "DisplayName": "Короткий"
+          },
+          {
+            "Name": "Normal",
+            "DisplayName": "Обычный"
+          },
+          {
+            "Name": "Big",
+            "DisplayName": "Длинный"
+          }
+        ]
+      }
     ]
   }
 }
