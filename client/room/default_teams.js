@@ -23,4 +23,3 @@ export function create_team_red() {
     team.Spawns.SpawnPointsGroups.Add(RED_TEAM_SPAWN_POINTS_GROUP);
     return team;
 }
-
