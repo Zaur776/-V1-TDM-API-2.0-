@@ -221,8 +221,8 @@ function SetGameMode() {
 
 function SetEndOfMatch() {
 	const leaderboard = LeaderBoard.GetTeams();
-	if (leaderboard.Weight !== leaderboard.Weight) {
-		SetEndOfMatch_MockMode(leaderboard.Team, leaderboard.Team);
+	if (leaderboard && leaderboard.length >= 2 && leaderboard[0].Weight !== leaderboard[1].Weight) {
+		SetEndOfMatch_MockMode(leaderboard[0].Team, leaderboard[1].Team);
 	}
 	else {
 		SetEndOfMatch_EndMode();
@@ -300,4 +300,4 @@ GameMode.OnStart.Add(function () {
 });
 
 SetWaitingMode();
-
+ 
