@@ -1,0 +1,19 @@
+{
+  "ApiVersion": 2,
+  "Name": "PRISON_RIOT",
+  "Description": "Prison Riot Mode",
+  "StartClientVersion": 532,
+  "Parameters": {
+    "Bool": [
+      { "Name": "Damage", "DisplayName": "Damage", "Default": true },
+      { "Name": "PartialDesruction", "DisplayName": "Destruction", "Default": false },
+      { "Name": "LoosenBlocks", "DisplayName": "Loosen Blocks", "Default": false },
+      { "Name": "RedTeam", "DisplayName": "Prisoners Team", "Default": true },
+      { "Name": "BlueTeam", "DisplayName": "Guards Team", "Default": true }
+    ],
+    "Number": [
+      { "Name": "MaxSpawns", "DisplayName": "Max Spawns", "Default": 0 },
+      { "Name": "RoundTime", "DisplayName": "Round Time (sec)", "Default": 600 }
+    ]
+  }
+}
